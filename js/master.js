@@ -4,19 +4,27 @@ function Ticket(titlee,time,age) {
   this.age = age;
 }
 
-var setTicketPrice = 10
+
 Ticket.prototype.price = function() {
-    if (this.time < 16 && this.time > 6 || this.age >= 65 || this.titlee === "Old Movie") {
+    var setTicketPrice = 10
+    if (this.time < "6:00" || this.age >= 65 || this.titlee === "12 Angry Men") {
       return (setTicketPrice * 0.8);
+    } else {
+      return 10;
     }
 }
 
 $(function() {
   $("#buyButton").click(function(event) {
-    var age = parseInt($("input#age").val());
-    var newTicket = new Ticket(titlee,time,age);
-    debugger;
-    $("#ticketInfo").append("<li>" + newTicket + "</li>");
     event.preventDefault();
+    var age = parseInt($("input#age").val());
+    var movies = $('select#movieTitles').val();
+    var time = $('select#time').val();
+    var newTicket = new Ticket (movies,time,age);
+    $("#ticketInfo").append("<li>Your age: " + age + "</li>" + "<li>Movie Title: " + movies + "</li>" + "<li>Time: " + time + "</li>");
+    $("#ticketPrice").append("<li>$" + newTicket.price() + ".00</li>");
+
+
+
   });
 });

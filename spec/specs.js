@@ -9,12 +9,12 @@ describe("Ticket",function(){
     var testTicket = new Ticket("Trainspotting", 17, 70)
     expect(testTicket.price()).to.equal(8);
   });
-  it("creates ticket that calculates twenty percent price discount if user attends between 6 and 16",function() {
-    var testTicket = new Ticket("Trainspotting", 13, 34)
+  it("creates ticket that calculates twenty percent price discount if user attends before 4:00",function() {
+    var testTicket = new Ticket("Trainspotting", "2:00", 34)
     expect(testTicket.price()).to.equal(8);
   });
   it("creates ticket that calculates twenty percent price discount if user attends older movie",function() {
-    var testTicket = new Ticket("Old Movie", 5, 34)
+    var testTicket = new Ticket("12 Angry Men", 5, 34)
     expect(testTicket.price()).to.equal(8);
   });
 });
