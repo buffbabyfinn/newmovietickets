@@ -10,3 +10,13 @@ Ticket.prototype.price = function() {
       return (setTicketPrice * 0.8);
     }
 }
+
+$(function() {
+  $("#buyButton").click(function(event) {
+    var age = parseInt($("input#age").val());
+    var newTicket = new Ticket(titlee,time,age);
+    debugger;
+    $("#ticketInfo").append("<li>" + newTicket + "</li>");
+    event.preventDefault();
+  });
+});

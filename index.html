@@ -9,6 +9,48 @@
     <script src="js/master.js" charset="utf-8"></script>
   </head>
   <body>
+    <div class="container">
+      <div class="form-group">
+        <label for="movieTitles">Select a Movie:</label>
+        <select class="form-control" id="movieTitles">
+          <option>Trainspotting</option>
+          <option>Batman</option>
+          <option>12 Angry Men</option>
+        </select>
+      </div>
+      <div id="timePicker">
+        <label class="dropdown">Time</label>
+          <select id="time">
+            <option>1:00</option>
+            <option>2:00</option>
+            <option>3:00</option>
+            <option>4:00</option>
+            <option>5:00</option>
+            <option>6:00</option>
+            <option>7:00</option>
+            <option>8:00</option>
+            <option>9:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+          </select>
+          <select id="pm" placeholder="PM">
+            <option>PM</option>
+          </select>
+      </div><br>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="age">Enter Your Age:</label><br>
+          <input type="number" class="form-control" id="age">
+        </div><br><br>
+        <button type="submit" class="btn btn-info" id="buyButton">Buy Ticket</button>
+      </form><br>
+      <div id="ticketResult">
+        <p>Your ticket is:
+          <ul id="ticketInfo">
 
+          </ul>
+        </p>
+      </div>
+    </div>
   </body>
 </html>
