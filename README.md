@@ -1,8 +1,6 @@
 # Installation Instructions:
 
 
-# _Andrew Cho and Izzy George_
-
 #### _Short Summary of Application!_
 
 #### By _**Us**_
